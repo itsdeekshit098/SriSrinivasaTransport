@@ -8,8 +8,7 @@ return (
     <div style={{ display: 'flex', gap: '20px', padding: '20px' }}>
     <Link href="/records/busRecords"><SquareCard imageUrl="/bus.png" label="Bus" /></Link>
     <Link href="/records/truckRecords"><SquareCard imageUrl="/truck.png" label="Truck" /></Link>
-      
-      
+    <Link href="/records/carRecords"><SquareCard imageUrl="/car.png" label="Car"></SquareCard></Link>
     </div>
   </>
 )

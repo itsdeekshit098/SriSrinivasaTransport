@@ -1,3 +1,4 @@
+// /pages/bus-records.tsx
 import Table from "@/components/Table";
 import { busData, Bus } from "@/data/busData";
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 type SquareCardProps = {
   imageUrl: string;
@@ -9,7 +10,7 @@ export default function SquareCard({ imageUrl, label }: SquareCardProps) {
   return (
     <div style={styles.card}>
       <div style={styles.imageContainer}>
-        <img src={imageUrl} alt={label} style={styles.image} />
+        <Image src={imageUrl} alt={label} style={styles.image} />
       </div>
       <div style={styles.label}>
         {label}

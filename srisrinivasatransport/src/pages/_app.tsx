@@ -9,8 +9,8 @@ import Navbar from "@/components/Navbar";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <Navbar />
-      <Component {...pageProps} />
+        <Navbar />
+        <Component {...pageProps} />
     </Provider>
   );
 }

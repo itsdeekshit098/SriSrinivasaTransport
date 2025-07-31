@@ -1,6 +1,6 @@
 // /pages/bus-records.tsx
 import Table from "@/components/Table";
-import { busData, Bus } from "@/data/busData";
+import { staticBusData, Bus } from "@/data/staticBusData";
 
 const columns: {
   header: string;
@@ -19,7 +19,7 @@ export default function BusRecordsPage() {
   return (
     <div style={{ padding: '2rem' }}>
       <h1>Bus Info Table</h1>
-      <Table<Bus> columns={columns} data={busData} />
+      <Table<Bus> columns={columns} data={staticBusData} />
     </div>
   );
 }

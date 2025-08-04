@@ -10,7 +10,7 @@ export type Bus = {
 };
 
 export const staticBusData: Bus[] =[
-    {
+  {
     id: 1,
     busNo: 'AP02Y1828',
     rcLink: 'https://drive.google.com/file/d/19pls_14Qen3Ke-yO0Jp6sDbqRd7CjQLh/view?usp=sharing',

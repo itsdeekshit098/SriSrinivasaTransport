@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type Column<T> = {
   header: string;
@@ -13,54 +13,49 @@ type TableProps<T> = {
 
 export default function Table<T>({ columns, data }: TableProps<T>) {
   return (
-    <table style={styles.table}>
-      <thead>
-        <tr>
-          {columns.map((col) => (
-            <th key={String(col.accessor)} style={styles.th}>
-              {col.header}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((row, rowIndex) => (
-          <tr key={rowIndex}>
-            {columns.map((col) => {
-              const value = row[col.accessor];
-              return (
-                <td key={String(col.accessor)} style={styles.td}>
-                  {col.isLink && typeof value === 'string' ? (
-                    <a href={value} target="_blank" rel="noopener noreferrer">
-                      View
-                    </a>
-                  ) : (
-                    String(value)
-                  )}
-                </td>
-              );
-            })}
+    <div className="w-full overflow-x-auto">
+      <table className="min-w-[600px] w-full border-collapse mt-5">
+        <thead>
+          <tr className="bg-gray-100 text-left">
+            {columns.map((col) => (
+              <th
+                key={String(col.accessor)}
+                className="px-4 py-3 border border-gray-300 whitespace-nowrap"
+              >
+                {col.header}
+              </th>
+            ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((row, rowIndex) => (
+            <tr key={rowIndex} className="hover:bg-gray-50">
+              {columns.map((col) => {
+                const value = row[col.accessor];
+                return (
+                  <td
+                    key={String(col.accessor)}
+                    className="px-4 py-3 border border-gray-300 whitespace-nowrap"
+                  >
+                    {col.isLink && typeof value === "string" ? (
+                      <a
+                        href={value}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                      >
+                        View
+                      </a>
+                    ) : (
+                      String(value)
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
-
-const styles: { [key: string]: React.CSSProperties } = {
-  table: {
-    width: '100%',
-    borderCollapse: 'collapse',
-    marginTop: '20px',
-  },
-  th: {
-    backgroundColor: '#f0f0f0',
-    padding: '12px',
-    border: '1px solid #ccc',
-    textAlign: 'left',
-  },
-  td: {
-    padding: '12px',
-    border: '1px solid #ccc',
-  },
-};

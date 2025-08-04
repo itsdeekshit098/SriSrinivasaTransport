@@ -19,6 +19,7 @@ export default function Navbar() {
           <Link href="/" style={{ marginRight: '1rem' }}>Home</Link>
           <Link href="/navBarComponents/about" style={{ marginRight: '1rem' }}>About</Link>
           <Link href="/navBarComponents/documents" style={{ marginRight: '1rem' }}>Documents</Link>
+          <Link  href="/navBarComponents/contact" style={{marginRight: '1rem'}}>Contact</Link>
           <Button>
             Login
           </Button>
@@ -34,7 +35,7 @@ export default function Navbar() {
           <Link href="/" className="block text-gray-700 hover:text-blue-700" onClick={()=>setIsOpen(false)}>Home</Link>
           <Link href="/navBarComponents/about" className="block text-gray-700 hover:text-blue-700" onClick={()=>setIsOpen(false)}>About</Link>
           <Link href="/navBarComponents/documents" className="block text-gray-700 hover:text-blue-700" onClick={()=>setIsOpen(false)}>Documents</Link>
-          <a href="#contact" className="block text-gray-700 hover:text-blue-700" onClick={()=>setIsOpen(false)}>Contact</a>
+          <a href="/navBar/contact" className="block text-gray-700 hover:text-blue-700" onClick={()=>setIsOpen(false)}>Contact</a>
         </div>
       )}
     </nav>

@@ -18,7 +18,7 @@ export default function DocumentsPage() {
             </CardContent>
           </Card>
         </Link>
-        <Link href="/staticRecords/busRecords">
+        <Link href="/staticRecords/truckRecords">
           <Card className="shadow-md border border-blue-100">
             <CardContent className="p-5">
               <img
@@ -30,7 +30,7 @@ export default function DocumentsPage() {
             </CardContent>
           </Card>
         </Link>
-        <Link href="/staticRecords/busRecords">
+        <Link href="/staticRecords/carRecords">
           <Card className="shadow-md border border-blue-100">
             <CardContent className="p-5">
               <img
